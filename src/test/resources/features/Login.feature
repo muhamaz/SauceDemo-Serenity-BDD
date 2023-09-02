@@ -1,16 +1,21 @@
-@login
-Feature: Saucedemo Login Functionality
+@Login
+  Feature: Login Functionality
+    As a user i want to login on website sauce demo
 
-  Scenario: User logged in
-    Given User already on login page
-    When User input username "standard_user"
-    And User input password "secret_sauce"
-    And User click login button
-    Then User directed to inventory page
+    Scenario: Login Successfully
+      Given Already on login page
+      When User input "standard_user" as userName and input "secret_sauce" as password
+      And Click login button
+      Then Redirect to homepage
 
-#  Scenario: User enter invalid Login username
-#    Given User landing on login page
-#    When User input invalid username "standard_user33"
-#    And User input valid password "secret_sauce"
-#    And User click on login button
-#    Then User can not login
+    Scenario Outline: Login Unsuccessfully
+      Given Already on login page
+      When User input "<userName>" as userName and input "<password>" as password
+      And Click login button
+      Then Error message "<message>" should appear
+      Examples:
+        | userName      | password     | message                                                                   |
+        | lalala        | lululu       | Epic sadface: Username and password do not match any user in this service |
+        | standard_user |              | Epic sadface: Password is required                                        |
+        |               | secret_sauce | Epic sadface: Username is required                                        |
+        |               |              | Epic sadface: Username is required                                        |

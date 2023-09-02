@@ -4,66 +4,41 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import starter.Pages.LoginPages;
+import starter.Pages.HomePage;
+import starter.Pages.LoginPage;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class LoginSteps {
-    LoginPages loginPages;
+    LoginPage loginPage;
+    HomePage homePage;
 
-    //Scenario 1
-    @Given("User already on login page")
-    public void UserAlreadyOnLoginPage() {
-        loginPages.open();
+    @Given("Already on login page")
+    public void verifyLoginPage(){
+        loginPage.open();
+        assertTrue(loginPage.verifyLoginPage());
     }
 
-    @When("User input username {string}")
-    public void UserInputUsername(String username) {
-        loginPages.InputUsername(username);
+    @When("User input {string} as userName and input {string} as password")
+    public void inputCredential(String userName, String password){
+        loginPage.setUserName(userName);
+        loginPage.setPassword(password);
     }
 
-    @And("User input password {string}")
-    public void UserInputPassword(String password) {
-        loginPages.InputPassword(password);
+
+    @And("Click login button")
+    public void clickLoginButton() {
+        loginPage.btnLogin();
     }
 
-    @And("User click login button")
-    public void UserClickLoginButton() {
-        loginPages.clickButton();
+    @Then("Redirect to homepage")
+    public void redirectToHomepage() {
+        assertTrue(homePage.verifyHomePage());
     }
 
-    @Then("User directed to inventory page")
-    public void UserDicrectedToInventoryPage() {
-        assertEquals("https://www.saucedemo.com/inventory.html", loginPages.getUrl());
-    }
-
-    @Given("User already on login")
-    public void UserAlreadyLogIn () {
-        loginPages.open();
-        loginPages.InputUsername("standard_user");
-        loginPages.InputPassword("secret_sauce");
-        loginPages.clickButton();
-    }
-
-    //Scenario 2
-    @Given("User landing on login page")
-    public void UserLandingOnLoginPage() {
-        loginPages.open();
-    }
-    @When("User input invalid username {string}")
-    public void UserInputInvalidUsername(String username) {
-        loginPages.InputUsername(username);
-    }
-    @And("User input valid password {string}")
-    public void UserInputValidPassword(String password) {
-        loginPages.InputPassword(password); }
-
-    @And("User click on login button")
-    public void UserClickOnLoginButton() {
-        loginPages.clickButton(); }
-
-    @Then("User can not login")
-    public void UserCanNotLogin() {
-        assertEquals("https://www.saucedemo.com/",loginPages.getUrl());
+    @Then("Error message {string} should appear")
+    public void errorMessageShouldAppear(String message){
+        assertEquals(message, loginPage.errorText());
     }
 }
