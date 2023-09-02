@@ -23,7 +23,7 @@
 #### Coverage Report
 ![report-Web-cpverage](https://github.com/muhamaz/SauceDemo-Serenity-BDD/blob/master/img/coverage.png)
 
-#### Automation Testing When Run in Intellij IDE and chrome
+#### Automation Testing When Run in Intellij IDE
 ![report-api-runningtest](https://github.com/muhamaz/SauceDemo-Serenity-BDD/blob/master/img/running.png)
 
 ## 🛠 Tools
