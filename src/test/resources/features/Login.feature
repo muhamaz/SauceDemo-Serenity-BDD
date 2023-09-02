@@ -1,3 +1,4 @@
+@login
 Feature: Saucedemo Login Functionality
 
   Scenario: User logged in
