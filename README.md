@@ -1,26 +1,30 @@
-<div align="center">
-  <a href="https://github.com/ALTA-Bringeee-Group1/Bringeee-API">
-    <img src="https://www.saucedemo.com/static/media/logo3x.096bf4a7.svg" width="400" height="144"><br />
-  </a>
-  WEB Automation Testing Project
-    <br />
+<div>
+<p align="center">
+    <a href="https://www.saucedemo.com/">
+       <img src="https://github.com/muhamaz/SauceDemo-Serenity-BDD/blob/master/img/logo.png" alt="Logo" height="90">
+    </a>
+  <br/>
+    <h3 align="center">WEB Automation Testing</h4>
+    <a href="https://www.saucedemo.com/"><p align="center"><b>| SauceDemo |</b></p></a>
+  <br />
+  <br />
+</p>
 </div>
 
 ## 📑 About the Project
 
-<p align="justify">Automation Testing on Sauce Labs app. Sauce Labs is an American cloud-hosted, web and mobile application automated testing platform company based in San Francisco, California.</p>
+<p align="justify">This is simple Web Automation Testing using selenium java cucumber serenity BDD on Website Saucedemo.com</p>
 
 ## 📝 Reports
 
 #### Summary Report
-![report-Web-summary](https://imgur.com/a/49qW2ow)
+![report-Web-summary](https://github.com/muhamaz/SauceDemo-Serenity-BDD/blob/master/img/sumReport.png)
 
 #### Coverage Report
-![report-Web-cpverage](./img/coverage%20report1.png)
+![report-Web-cpverage](https://github.com/muhamaz/SauceDemo-Serenity-BDD/blob/master/img/coverage.png)
 
 #### Automation Testing When Run in Intellij IDE and chrome
-![report-api-runningtest](./img/intelij.png)
-![tampilan-chrome](./img/chrome.png)
+![report-api-runningtest](https://github.com/muhamaz/SauceDemo-Serenity-BDD/blob/master/img/running.png)
 
 ## 🛠 Tools
 
@@ -55,5 +59,5 @@
   [![GitHub](https://img.shields.io/badge/-MhumamZaky-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/muhamaz)
 
 <h5>
-<p align="center">:copyright: 2023 | This Repository Built with :heart: from us</p>
+<p align="center">:copyright: 2023 | This Repository Built with :heart:</p>
 </h5>
